@@ -1,5 +1,6 @@
 #include <wx/wx.h> 
 #include <wx/notebook.h> 
+#include <wx/busyinfo.h>
 
 #define MODIFY_MENU					1
 #define MODIFY_PANEL				1

@@ -11,7 +11,7 @@ bool CKroemApp::OnInit()
 #elif 0
     CKroemFrame* frame = new CKroemFrame(wxPoint(0, 0), 2, 2);
 	frame->Show();
-#elif 1
+#elif 0
 	wxPosFrame* frame = new wxPosFrame;
 	frame->Create(NULL,wxID_ANY,"First App",wxPoint(0, 0),wxSize(800,600), wxNO_BORDER | wxSTAY_ON_TOP,wxPanelNameStr); 
 	frame->Enable(true);
@@ -32,6 +32,11 @@ CKroemFrame::CKroemFrame(wxWindow *parent,
 				const wxString& title)
 : wxFrame(parent, id, title)
 {
+    //wxBusyInfo
+    wxBusyInfo wait("Please wait, working...");
+    Sleep(1000);
+
+    //Frame
 #if defined( MODIFY_MENU )
 	// Create a menu bar
     wxMenu *fileMenu = new wxMenu;
