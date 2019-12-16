@@ -15,6 +15,13 @@ class CKroemApp : public wxApp
         nIndex = strDir.find(_T("goabc"),0,2);
         wxLogDebug("find index:%d.\n",nIndex);
 
+        //wxCharBuffer
+        wxString wxPtr = _T("123 456");
+        char * pTmp = NULL;
+        wxCharBuffer mbstrwx;
+        mbstrwx = wxPtr.mb_str();
+        pTmp = mbstrwx.data();
+
         //wxArrayString
 
         //wxDateTime
